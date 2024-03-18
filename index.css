@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+body{
+    background-image: url(historia.jpg);
+    background-size: 100vw 120vh;
+    background-repeat: no-repeat;
+}
+.capa{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    top: 0;left: 0;
+}
+/*Estilos para el encabezado*/
+.header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;left: 0;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container .btn-menu, .logo{
+    float: left;
+    line-height:100px;
+}
+.container .btn-menu label{
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+.logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 35px;
+    margin-left: 10px;
+}
+.container .menu{
+    float: right;
+    line-height: 100px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 8px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* Estilos para el formulario */
+.formulario {
+    width: 90%; /* Modificado para que sea más responsivo */
+    max-width: 400px;
+    padding: 2rem; /* Aumentado el padding para más espacio */
+    margin: 10% auto; /* Centrado vertical y horizontal */
+    background-color: rgba(51, 51, 51, 0.602);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos para el texto "Create Account" */
+.create-account {
+    padding: 1.5rem 0; /* Reducido el padding para menos espacio */
+    font-size: 1.5rem; /* Reducido el tamaño de fuente */
+}
+
+/* Estilos para el texto "Cuenta Gratis" */
+.cuenta-gratis {
+    padding: 1rem 0; /* Reducido el padding para menos espacio */
+}
+
+/* Estilos para los campos de entrada */
+.formulario input {
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1.6rem; /* Reducido el espacio entre los campos de entrada */
+    background-color: transparent;
+    border: none;
+    border-bottom: white thin solid;
+    text-align: center;
+    outline: none;
+    padding: .5rem 0; /* Reducido el padding para menos espacio */
+    font-size: .8rem; /* Reducido el tamaño de fuente */
+    color: white;
+
+}
+.formulario input[type="button"] {
+    width: 70%; /* Modificado el ancho para un diseño más responsivo */
+    margin: auto;
+    margin-top: 2rem; /* Reducido el margen superior para menos espacio */
+    padding: .7rem;
+    border-radius: 1rem;
+    background-color: white;
+    font-weight: 500;
+    font-size: 40px; /* Ajustado el tamaño de fuente a 40px */
+    cursor: pointer;
+    color: #222;
+}
+h1{
+    color: #fff;
+}
+label{
+    font-size: 150%;
+}
+.formulario input[type="submit"] {
+    color: rgb(255, 255, 255); /* Texto de color negro */
+    font-size: 30px; /* Tamaño de fuente más grande */
+}
